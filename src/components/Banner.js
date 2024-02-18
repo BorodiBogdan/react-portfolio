@@ -17,8 +17,8 @@ export function Banner() {
                             </strong> at <strong>Babeș-Bolyai University from Cluj Napoca</strong>.</p>
                         <button onClick={() => console.log("Clicked")}><span className="tagline">Welcome to my portofolio</span></button>
                     </Col>
-                    <Col className="col">
-                        <img className="" src={headerImg} alt="Header Image"></img>
+                    <Col className="col image-of-me">
+                        <img claclassName="" src={headerImg} alt="Header Image"></img>
                     </Col>
                 </Row>
             </Container>
