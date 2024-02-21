@@ -32,7 +32,7 @@ function ProjectSlider() {
 
 
     return (
-        <div class="project-container">
+        <div class="project-container" id="projects">
             <div className="arrow-and-project-container">
                 {
                     /*<i className="arrow left" onClick={() => (activeIndex > 0) ? setActiveIndex(activeIndex - 1) : setActiveIndex(activeIndex)}></i>

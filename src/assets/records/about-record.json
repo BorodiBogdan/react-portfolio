@@ -1,32 +1,43 @@
 [
     {
         "id": 1,
-        "image": "../assets/img/profile-cut.jpg",
         "title": "ABOUT ME",
-        "content": "Greetings! My name is Borodi Bogdan, but my closest friends call me Bob. I am a 19-year-old student from Bistrita, Romania - probably one of the smallest towns on earth - pursuing a Bachelor's Degree in Computer Science at Babeș-Bolyai University from Cluj Napoca.Welcome to my portofolio"
+        "content": [
+            "Hey there! My name is Borodi Bogdan, but my closest friends call me Bob. I am a 19-year-old student from Bistrita, Romania passionate about tech.",
+            "My journey into programming began during high school, sparking a fire within me for all things tech. I thrive on challenges, constantly seeking to expand my skills and knowledge. ",
+            "The first language programming i have ever used was C++, during informatics classes in high school. Since then, I explored several languages and technologies like C#, Python, 80x86 Assembly, React and so on.",
+            "Outside of coding, I'm passionate about sports and fitness. Music also holds a special place in my heart – whether it's jamming out to my favorite tunes or finding inspiration in rhythm and melody."
+        ]
     },
     {
         "id": 2,
-        "image": "../assets/img/profile-cut.jpg",
         "title": "EDUCATION",
-        "content": "Greetings! My name is Borodi Vasile, but my closest friends call me Bob. I am a 19-year-old student from Bistrita, Romania - probably one of the smallest towns on earth - pursuing a Bachelor's Degree in Computer Science at Babeș-Bolyai University from Cluj Napoca.Welcome to my portofolio"
+        "content": [
+            "My educational journey has been marked by dedication, excellence, and a genuine passion for learning. I completed my secondary education at National College Liviu Rebreanu in Bistrița, where I distinguished myself with exceptional results, particularly in the field of informatics.",
+            " My academic performance and disciplined approach were recognized through a scholarship from CJ Bistrița-Năsăud, underscoring my commitment to excellence.",
+            "Currently, I am enrolled at Babeș-Bolyai University (BBU) in Cluj-Napoca, pursuing a Bachelor's degree in Computer Science. Here, my fervor for the subject truly comes alive as I immerse myself in the intricacies of programming, algorithms, and technology. Each day, I find myself drawn deeper into the world of computer science, driven by an unwavering love for what I am studying."
+        ]
     },
     {
         "id": 3,
-        "image": "../assets/img/profile-cut.jpg",
-        "title": "SKILLS",
-        "content": "Greetings! My name is Borodi Dogdan, but my closest friends call me Bob. I am a 19-year-old student from Bistrita, Romania - probably one of the smallest towns on earth - pursuing a Bachelor's Degree in Computer Science at Babeș-Bolyai University from Cluj Napoca.Welcome to my portofolio"
+        "title": "EXTRA ACTIVITIES",
+        "content": [
+            "In addition to my academic pursuits, I have also made significant contributions to the field of informatics. Over the past three years, I have earned three medals in the prestigious National Olympiad of Informatics, showcasing my proficiency and expertise in the discipline.",
+            "Furthermore, I am deeply committed to sharing my knowledge and expertise with others. I am currently serving as a mentor and educator for Z-builders, where I teach students how to code in C++ as well as fundamental data structures and algorithms.",
+            "I'm involved in PbInfo, Romania's top problem-solving platform. Besides solving problems, I also create new ones. I've designed tests and solutions for these challenges to spark creativity and critical thinking among fellow programmers."
+        ]
     },
     {
         "id": 4,
-        "image": "../assets/img/profile-cut.jpg",
-        "title": "EXTRA ACTIVITIES",
-        "content": "Greetings! My name is Borodi Vasile, but my closest friends call me Bob. I am a 19-year-old student from Bistrita, Romania - probably one of the smallest towns on earth - pursuing a Bachelor's Degree in Computer Science at Babeș-Bolyai University from Cluj Napoca.Welcome to my portofolio"
-    },
-    {
-        "id": 5,
-        "image": "../assets/img/profile-cut.jpg",
-        "title": "PASSIONS",
-        "content": "Greetings! My name is Borodi Vasile, but my closest friends call me Bob. I am a 19-year-old student from Bistrita, Romania - probably one of the smallest towns on earth - pursuing a Bachelor's Degree in Computer Science at Babeș-Bolyai University from Cluj Napoca.Welcome to my portofolio"
+        "title": "SKILLS",
+        "content": [
+            "Proficient in Data Structures and Algorithms",
+            "Languages: C++, C#, React, Python, 80x86 Assembly and many more",
+            "Very good english speaker.",
+            "I possess strong communication skills.",
+            "I'm highly curious and love exploring new concepts.",
+            "I have a knack for picking up new skills quickly.",
+            "Impressive social skills."
+        ]
     }
 ]
