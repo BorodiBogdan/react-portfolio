@@ -34,6 +34,7 @@ body {
   overflow-x: hidden;
   position: relative;
   background-color: #121212 !important;
+  background-color: #060a12 !important;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -98,7 +99,7 @@ p.danger {
 /************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   z-index: 9999;
@@ -185,7 +186,7 @@ span.navbar-text {
   font-weight: 700;
   color: #fff;
   border: 1px solid #fff;
-  padding: 18px 34px;
+  padding: 10px 34px;
   font-size: 18px;
   margin-left: 18px;
   position: relative;
@@ -277,15 +278,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner .col {
   width: 50%;
   display: inline-block;
+  padding-top: 100px;
+}
+
+.hero-container {
+  border-bottom: #fff solid 1px;
+  opacity: 0.9;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
 }
 
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  background-color: #060a12 !important;
   background-position: top center;
+  position: static;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .banner .tagline {
@@ -345,6 +359,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   animation: updown 3s linear infinite;
 }
 
+.banner {
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.banner h1 {
+  font-size: 40px;
+}
+
 @keyframes updown {
   0% {
     transform: translateY(-10px);
@@ -375,6 +402,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /*About CSS*/
+
+
 .about-container {
   padding: 40px;
 }
@@ -396,13 +425,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .control-button {
-  padding: 10px;
+  padding-bottom: 20px;
   text-align: center;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 700;
   margin: 10px;
-  border: #545353 solid 2px;
-  border-radius: 20px;
 }
 
 .control-button:hover {
@@ -429,13 +456,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .about-me-img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 50%;
-  height: fit-content;
-  border-radius: 20px;
-  padding: 20px;
-  border: #545353 solid 2px;
+  border-radius: 50px;
   margin: 20px;
 }
 
@@ -451,14 +473,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .about-me {
-  padding: 20px;
+  padding: 0 50px 0 50px;
   font-size: 20px;
   color: #ffffff;
   display: flex;
   flex-direction: row;
 }
 
+.slide {
+  padding: 50px;
+}
 
+.carousel-div-about {
+  background-size: cover;
+  min-height: 100vh;
+}
 
 
 
@@ -475,13 +504,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .container-title {
   font-family: Impact, 'Arial Narrow Bold', sans-serif;
   font: bold;
-  text-align: center;
-  font-size: 50px;
-  padding-top: 30px;
+}
+
+.align-the-title {
+  display: flex;
+  flex-direction: column;
 }
 
 .Project-Container {
-  padding-top: 50px;
+  cursor: grab;
   padding-bottom: 50px;
   background: transparent;
   width: 100vw;
@@ -510,12 +541,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  border: #ffffff 2px solid;
   background-image: url('./assets/img/banner-bg.png');
   background-color: #545353;
   z-index: 190;
   width: 25vw;
-  border-radius: 25px;
+  border-radius: 10px;
   margin: 10px;
 }
 
@@ -524,7 +554,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project-holder-active:hover {
-  box-shadow: 0 0 25px #ffffff;
+  border: #ffffff 2px solid;
+  box-shadow: 0 0 10px #ffffff;
 }
 
 .carousel {
@@ -540,8 +571,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .Project-Title {
+  padding-top: 15px;
   color: white;
   text-align: center;
+}
+
+.Project-Title:hover {
+  color: rgb(0, 119, 255);
+  transition: 0.4s;
 }
 
 .project-image {
@@ -550,7 +587,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-right: auto;
   width: 100%;
   height: fit-content;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .item img {
@@ -562,6 +599,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.project-button {
+  text-decoration: none;
 }
 
 /*arrow css*/
@@ -591,6 +632,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   -webkit-transform: rotate(135deg);
 }
 
+.card-info {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  width: 96%;
+  opacity: 0.8;
+}
+
 /*Footer CSS*/
 .footer-container {
   border-top: #ffffff 2px solid;
@@ -598,15 +647,27 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #121212;
   color: white;
   padding: 20px;
   width: 100%;
   height: 100%;
 }
 
+.footer-container a {
+  text-decoration: none;
+  color: white;
+}
+
 /* End of App.css */
 @media screen and (max-width: 800px) {
+  .container-title {
+    text-align: center;
+  }
+
+  .card-info {
+    display: none;
+  }
+
   .Project-Container {
     display: flex;
     flex-direction: column;
@@ -629,15 +690,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     display: none !important;
   }
 
-  .banner {
-    padding: 20px;
-    height: 100vh;
+  .controls {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
   }
 
-  .banner h1 {
-    font-size: 40px;
+  .about-me {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-me-img {
+    width: 100%;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .about-me-text {
+    width: 100%;
+  }
+
+  .card-info {
+    padding: 20px;
   }
 }

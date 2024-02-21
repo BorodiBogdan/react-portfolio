@@ -1,5 +1,38 @@
 import { useEffect, useState } from "react";
-import IMAGES from "../assets/records/images";
+import IMAGES from "../assets/records/about-images";
+import Records from "../assets/records/about-record.json";
+import Carousel from 'react-bootstrap/Carousel';
+
+function About() {
+    return (
+        <Carousel className="carousel-div-about">
+            {Records.map((content, index) => {
+                return (
+                    <Carousel.Item interval={5000}>
+                        <div className="about-me carousel-item active" >
+                            <p className="control-button">{content['title']}</p>
+                            <div className="about-me">
+
+                                <img className="about-me-img" src={IMAGES[index]} alt="" />
+
+                                <div className="about-me-text">
+                                    <p className="alice">{content['content']}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </Carousel.Item>
+                )
+
+            })
+            }
+        </Carousel>
+    );
+}
+
+export default About;
+/*
+import { useEffect, useState } from "react";
+import IMAGES from "../assets/records/about-images";
 import Records from "../assets/records/about-record.json";
 
 export function About() {
@@ -18,6 +51,7 @@ export function About() {
     useEffect(() => {
 
     }, [content]);
+
 
     return (
         <div className="about-container">
@@ -49,3 +83,4 @@ export function About() {
         </div >
     )
 }
+*/

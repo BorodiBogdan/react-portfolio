@@ -14,6 +14,7 @@ export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
+  // in case we want a fixed nav bar we decomment line 40 and go to css and change position from absolute to fixed for navbar
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50 || window.innerWidth < 800) {
@@ -28,13 +29,14 @@ export const NavBar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [])
 
+
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   }
 
   return (
     <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+      <Navbar expand="md" className={"" /*scrolled ? "scrolled" : ""*/}>
         <Container>
           <Navbar.Brand href="/">
             <img className="navbar-logo" src={logo} alt="Logo" />
@@ -55,7 +57,7 @@ export const NavBar = () => {
                 <a href="#"><img src={navIcon3} alt="" /></a>
               </div>
               <HashLink to='#connect'>
-                <button className="vvd"><span>Contact me</span></button>
+                <button className="vvd"><span>resume</span></button>
               </HashLink>
             </span>
           </Navbar.Collapse>

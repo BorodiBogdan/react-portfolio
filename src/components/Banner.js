@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/profile-cut.jpg";
+import headerImg from "../assets/img/header-img.svg";
 
 export function Banner() {
     return (
         <section id="home" className="banner">
-            <Container>
-                <Row>
+            <Container className="hero-container">
+                <Row className="add-line">
                     <Col className="col">
                         <h1>Hi, I'm Borodi Bogdan!</h1>
                         <p>Greetings! My name is <strong>Borodi Bogdan
