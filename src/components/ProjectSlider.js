@@ -78,3 +78,5 @@ export function ProjectSlider() {
         </div >
     );
 }
+
+export default ProjectSlider;
