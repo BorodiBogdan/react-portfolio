@@ -4,12 +4,11 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 export function ProjectSlider() {
-    const [ProjectList, SetProjecteList] = useState(Records);
-    const [Images, SetImages] = useState(IMAGES);
+    //const [ProjectList, SetProjecteList] = useState(Records);
+    //const [Images, SetImages] = useState(IMAGES);
 
-    const length = ProjectList.length;
     const [width, setWidth] = useState(0);
-    const [activeIndex, setActiveIndex] = useState(0);
+    //const [activeIndex, setActiveIndex] = useState(0);
 
     const carousel = useRef();
 
@@ -17,9 +16,8 @@ export function ProjectSlider() {
         console.log(carousel.current.scrollWidth);
         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
     }, [width]);
-
+    /*
     useEffect(() => {
-        console.log(activeIndex);
         var cardWidth = carousel.current.scrollWidth / length;
 
         carousel.current.scrollTo({
@@ -30,7 +28,7 @@ export function ProjectSlider() {
 
     }, [activeIndex]);
 
-
+*/
     return (
         <div class="project-container" id="projects">
             <div className="arrow-and-project-container">
@@ -50,14 +48,14 @@ export function ProjectSlider() {
                                 className="motion-carousel Project-Container"
 
                             >
-                                {ProjectList.map((project, index) => {
+                                {Records.map((project, index) => {
                                     console.log(project);
                                     return (
 
                                         <motion.div className="item" key={project.index}>
-                                            <div className="project-holder-active">
+                                            <div className="project-holder-active">scroll
 
-                                                <img className="project-image" src={Images[index]} />
+                                                <img className="project-image" src={IMAGES[index]} alt={Records['alt']} />
                                                 <a href={project.href} target="new" className="project-button">
                                                     <h1 className="Project-Title">{project.title}</h1>
                                                 </a>

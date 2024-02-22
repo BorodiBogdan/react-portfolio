@@ -17,7 +17,7 @@ export function Banner() {
                         <button><span className="tagline">Welcome to my portofolio</span></button>
                     </Col>
                     <Col className="col image-of-me">
-                        <img claclassName="" src={headerImg} alt="Header Image"></img>
+                        <img claclassName="" src={headerImg} alt="Header"></img>
                     </Col>
                 </Row>
             </Container>

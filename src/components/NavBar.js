@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/logo-white.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
@@ -12,7 +12,7 @@ import {
 export const NavBar = () => {
 
   const [activeLink, setActiveLink] = useState('home');
-  const [scrolled, setScrolled] = useState(false);
+  /*const [scrolled, setScrolled] = useState(false);
 
   // in case we want a fixed nav bar we decomment line 40 and go to css and change position from absolute to fixed for navbar
   useEffect(() => {
@@ -29,7 +29,7 @@ export const NavBar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [])
 
-
+  */
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   }
@@ -52,9 +52,9 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com/in/bogdan-borodi-b35724292/"><img src={navIcon1} alt="" /></a>
-                <a href="https://www.facebook.com/borodi.bogdan/"><img src={navIcon2} alt="" /></a>
-                <a href="https://www.instagram.com/borodi_bogdan/"><img src={navIcon3} alt="" /></a>
+                <a href="https://www.linkedin.com/in/bogdan-borodi-b35724292/"><img src={navIcon1} alt="linkedin" /></a>
+                <a href="https://www.facebook.com/borodi.bogdan/"><img src={navIcon2} alt="Facebook" /></a>
+                <a href="https://www.instagram.com/borodi_bogdan/"><img src={navIcon3} alt="instagram" /></a>
               </div>
               <HashLink to='https://drive.google.com/file/d/1jJLJd3w14vGUkFseJtQmotU2Ne7cpAKl/view?usp=drive_link'>
                 <button className="vvd"><span>resume</span></button>

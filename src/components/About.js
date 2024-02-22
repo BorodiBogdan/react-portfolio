@@ -12,7 +12,7 @@ export function About() {
                             <p className="control-button">{content['title']}</p>
                             <div className="about-me">
 
-                                <img className="about-me-img" src={IMAGES[index]} alt="" />
+                                <img className="about-me-img" src={IMAGES[index]} alt="about" />
 
                                 <div className="about-me-text">
                                     {content['content'].map((line) => {
