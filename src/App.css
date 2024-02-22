@@ -499,7 +499,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .carousel-div-about {
   background-size: cover;
-  min-height: 100vh;
+  min-height: 80vh;
+}
+
+.carousel-div-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-inner {
+  max-width: 1800px;
 }
 
 
@@ -596,8 +606,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .project-image {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 100%;
   height: fit-content;
   border-radius: 10px;
@@ -728,7 +736,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   .about-me {
     padding: 0 0 0 0;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -783,5 +790,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   .nav-bar-min {
     background-color: #060a12;
+  }
+
+  .banner h1 {
+    font-size: 24px;
+  }
+
+  .banner p {
+    font-size: 15px;
   }
 }
