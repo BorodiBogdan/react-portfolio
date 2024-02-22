@@ -3,7 +3,7 @@ import Records from "../assets/records/project-record.json";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-function ProjectSlider() {
+export function ProjectSlider() {
     const [ProjectList, SetProjecteList] = useState(Records);
     const [Images, SetImages] = useState(IMAGES);
 
@@ -78,5 +78,3 @@ function ProjectSlider() {
         </div >
     );
 }
-
-export default ProjectSlider;

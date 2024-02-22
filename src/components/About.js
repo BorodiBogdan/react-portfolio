@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
 import IMAGES from "../assets/records/about-images";
 import Records from "../assets/records/about-record.json";
 import Carousel from 'react-bootstrap/Carousel';
 
-function About() {
+export function About() {
     return (
         <Carousel className="carousel-div-about" id="about">
             {Records.map((content, index) => {
@@ -32,8 +31,6 @@ function About() {
         </Carousel >
     );
 }
-
-export default About;
 /*
 import { useEffect, useState } from "react";
 import IMAGES from "../assets/records/about-images";
