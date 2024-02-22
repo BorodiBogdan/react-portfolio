@@ -66,3 +66,4 @@ export const NavBar = () => {
     </Router>
   )
 }
+export default NavBar;
