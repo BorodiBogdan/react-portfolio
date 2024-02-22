@@ -13,7 +13,6 @@ export function ProjectSlider() {
     const carousel = useRef();
 
     useEffect(() => {
-        console.log(carousel.current.scrollWidth);
         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
     }, [width]);
     /*
@@ -30,7 +29,7 @@ export function ProjectSlider() {
 
 */
     return (
-        <div class="project-container" id="projects">
+        <div className="project-container" id="projects">
             <div className="arrow-and-project-container">
                 {
                     /*<i className="arrow left" onClick={() => (activeIndex > 0) ? setActiveIndex(activeIndex - 1) : setActiveIndex(activeIndex)}></i>
@@ -38,7 +37,7 @@ export function ProjectSlider() {
                 }
                 <div className="center-div">
                     <div className="align-the-title">
-                        <h1 class="container-title">My work:</h1>
+                        <h1 className="container-title">My work:</h1>
                         <p className="card-info">Drag the cards in order to see more pojects!<br />
                             If you want to see the source code or it's full presentation click on the title.</p>
                         <motion.div ref={carousel} className="carousel" whileTap={{ cursor: "grabbing" }}>
@@ -49,11 +48,10 @@ export function ProjectSlider() {
 
                             >
                                 {Records.map((project, index) => {
-                                    console.log(project);
                                     return (
 
-                                        <motion.div className="item" key={project.index}>
-                                            <div className="project-holder-active">scroll
+                                        <motion.div className="item" key={project.href}>
+                                            <div className="project-holder-active">
 
                                                 <img className="project-image" src={IMAGES[index]} alt={Records['alt']} />
                                                 <a href={project.href} target="new" className="project-button">

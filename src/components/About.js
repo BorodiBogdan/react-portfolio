@@ -7,7 +7,7 @@ export function About() {
         <Carousel className="carousel-div-about" id="about">
             {Records.map((content, index) => {
                 return (
-                    <Carousel.Item interval={5000000}>
+                    <Carousel.Item interval={5000000} key={index}>
                         <div className="about-me carousel-item active" >
                             <p className="control-button">{content['title']}</p>
                             <div className="about-me">
@@ -15,9 +15,9 @@ export function About() {
                                 <img className="about-me-img" src={IMAGES[index]} alt="about" />
 
                                 <div className="about-me-text">
-                                    {content['content'].map((line) => {
+                                    {content['content'].map((line, index) => {
                                         return (
-                                            <p className="alice">{line}<br /></p>
+                                            <p className="alice" key={line}> {line} < br /></p>
                                         )
                                     })}
                                 </div>

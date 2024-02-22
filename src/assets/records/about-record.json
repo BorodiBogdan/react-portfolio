@@ -4,27 +4,27 @@
         "title": "ABOUT ME",
         "content": [
             "Hey there! My name is Borodi Bogdan, but my closest friends call me Bob. I am a 19-year-old student from Bistrita, Romania passionate about tech.",
-            "My journey into programming began during high school, sparking a fire within me for all things tech. I thrive on challenges, constantly seeking to expand my skills and knowledge. ",
+            "My journey into programming began during high school, sparking a fire within me for all things tech. ",
             "The first language programming i have ever used was C++, during informatics classes in high school. Since then, I explored several languages and technologies like C#, Python, 80x86 Assembly, React and so on.",
-            "Outside of coding, I'm passionate about sports and fitness. Music also holds a special place in my heart – whether it's jamming out to my favorite tunes or finding inspiration in rhythm and melody."
+            "Outside of coding, I'm passionate about sports and fitness. Music also holds a special place in my heart."
         ]
     },
     {
         "id": 2,
         "title": "EDUCATION",
         "content": [
-            "My educational journey has been marked by dedication, excellence, and a genuine passion for learning. I completed my secondary education at National College Liviu Rebreanu in Bistrița, where I distinguished myself with exceptional results, particularly in the field of informatics.",
+            " I completed my secondary education at National College Liviu Rebreanu - Bistrița, where I distinguished myself with exceptional results, particularly in the field of informatics.",
             " My academic performance and disciplined approach were recognized through a scholarship from CJ Bistrița-Năsăud, underscoring my commitment to excellence.",
-            "Currently, I am enrolled at Babeș-Bolyai University (BBU) in Cluj-Napoca, pursuing a Bachelor's degree in Computer Science. Here, my fervor for the subject truly comes alive as I immerse myself in the intricacies of programming, algorithms, and technology. Each day, I find myself drawn deeper into the world of computer science, driven by an unwavering love for what I am studying."
+            "Currently, I am enrolled at Babeș-Bolyai University (BBU) in Cluj-Napoca, pursuing a Bachelor's degree in Computer Science."
         ]
     },
     {
         "id": 3,
         "title": "EXTRA ACTIVITIES",
         "content": [
-            "In addition to my academic pursuits, I have also made significant contributions to the field of informatics. Over the past three years, I have earned three medals in the prestigious National Olympiad of Informatics, showcasing my proficiency and expertise in the discipline.",
+            "Over the past three years, I have earned three medals in the prestigious National Olympiad of Informatics, showcasing my proficiency and expertise in the discipline.",
             "Furthermore, I am deeply committed to sharing my knowledge and expertise with others. I am currently serving as a mentor and educator for Z-builders, where I teach students how to code in C++ as well as fundamental data structures and algorithms.",
-            "I'm involved in PbInfo, Romania's top problem-solving platform. Besides solving problems, I also create new ones. I've designed tests and solutions for these challenges to spark creativity and critical thinking among fellow programmers."
+            "I'm involved in PbInfo, Romania's top problem-solving platform. Besides solving problems, I also create new ones. I've designed tests and solutions that were used of over 100 students."
         ]
     },
     {

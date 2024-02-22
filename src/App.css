@@ -448,7 +448,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .about-me-text {
   padding: 20px;
-  font-size: 20px;
+  font-size: 23px;
   color: #ffffff;
   width: 50%;
 }
@@ -732,7 +732,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 
   .about-me-text {
-    font-size: 11px;
+    font-size: 13px;
     width: 100%;
     width: 100%;
   }
@@ -761,5 +761,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   .control-button {
     font-size: 30px;
+  }
+
+  .banner .col {
+    width: 50%;
+    display: inline-block;
+    padding-top: 130px;
+  }
+
+  .nav-bar-min {
+    background-color: #060a12;
   }
 }
