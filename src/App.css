@@ -697,6 +697,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: white;
 }
 
+/*Page not found CSS*/
+
+
+.page-not-found-h3 {
+  font-size: 100px;
+}
+
+.page-not-found-h2 {
+  font-size: 60px;
+}
+
+.purple-digit {
+  color: #6f00ff;
+}
+
 /* End of App.css */
 @media screen and (max-width: 800px) {
   .container-title {
@@ -798,5 +813,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   .banner p {
     font-size: 15px;
+  }
+
+  .page-not-found-h2 {
+    font-size: 35px;
+  }
+
+  .navbar-logo {
+    transform: translateX(23px);
   }
 }
