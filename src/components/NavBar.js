@@ -57,9 +57,9 @@ export const NavBar = () => {
                 <a href="https://www.facebook.com/borodi.bogdan/"><img src={navIcon2} alt="Facebook" /></a>
                 <a href="https://www.instagram.com/borodi_bogdan/"><img src={navIcon3} alt="instagram" /></a>
               </div>
-              <HashLink to='https://drive.google.com/file/d/1jJLJd3w14vGUkFseJtQmotU2Ne7cpAKl/view?usp=drive_link'>
+              <a href='https://drive.google.com/file/d/1jJLJd3w14vGUkFseJtQmotU2Ne7cpAKl/view?usp=drive_link'>
                 <button className="vvd"><span>resume</span></button>
-              </HashLink>
+              </a>
             </span>
           </Navbar.Collapse>
         </Container>
