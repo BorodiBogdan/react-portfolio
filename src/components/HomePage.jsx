@@ -9,7 +9,6 @@ function HomePage() {
             <Banner />
             <About />
             <ProjectSlider />
-            <Footer />
         </div>
     );
 }
