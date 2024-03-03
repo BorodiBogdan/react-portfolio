@@ -27,8 +27,7 @@ function App() {
   }, [])
 
   const userName = localStorage.getItem("name");
-  //userName
-  console.log(userName);
+
   return (
 
     <Router>
@@ -37,7 +36,7 @@ function App() {
         <Route path="/" exact component={HomePage} />
         <Route path="/blog" exact component={Blog} />
         <Route path="/admin" exact component={Admin} />
-        {userName === "Borodi Bogdan (XBogdan24)" ? <Route path="/post" exact component={CreatePost} /> : ""}
+        {userName === "Bogdan Borodi" ? <Route path="/post" exact component={CreatePost} /> : ""}
         {postLists.map((post) => {
           return (
             <Route key={post.id} path={'/' + post.title} render={() => <BlogPost title={post.title} postText={post.postText} imageLink={post.imageLink} author={post.author.name} date={post.date} />} />
