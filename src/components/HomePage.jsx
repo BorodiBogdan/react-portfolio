@@ -1,5 +1,4 @@
 import Banner from './Banner';
-import Footer from './Footer';
 import ProjectSlider from './ProjectSlider';
 import About from './About'
 

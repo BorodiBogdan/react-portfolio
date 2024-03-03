@@ -16,12 +16,14 @@ export function Banner() {
                 <Row className="add-line">
                     <Col className="col">
                         <h1>Hi, I'm <span>{text}</span><Cursor /></h1>
-                        <p>Greetings! My name is <strong>Borodi Bogdan
-                        </strong>, but my closest friends call me <strong>Bob
-                            </strong>. I am a 19-year-old  student from <strong>Bistrita, Romania
-                            </strong> - probably one of the smallest towns on earth - pursuing a <strong>
-                                Bachelor's Degree in Computer Science
-                            </strong> at <strong>Babeș-Bolyai University from Cluj Napoca</strong>.</p>
+                        <p>Hey there! I go by the name <strong>Borodi Bogdan</strong>,
+                            though my buddies know me as <strong>Bob</strong>.
+                            Currently, I'm a 19-year-old student from
+                            <strong> Bistrita, Romania</strong>
+                            I'm on the journey towards earning my <strong>
+                                Bachelor's Degree in Computer Science</strong> at <strong>
+                                Babeș-Bolyai University in Cluj Napoca</strong>. If you want to follow me on this
+                            journey you can check my blog page. <strong>Wish you all the best!!!</strong></p>
                         <button><span className="tagline">Welcome to my portofolio</span></button>
                     </Col>
                     <Col className="col image-of-me">
