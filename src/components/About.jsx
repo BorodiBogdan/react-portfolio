@@ -4,31 +4,35 @@ import Carousel from 'react-bootstrap/Carousel';
 
 export function About() {
     return (
-        <Carousel className="carousel-div-about" id="about">
-            {Records.map((content, index) => {
-                return (
-                    <Carousel.Item interval={5000000} key={index}>
-                        <div className="about-me carousel-item active" >
-                            <p className="control-button">{content['title']}</p>
-                            <div className="about-me">
+        <div className="center-content">
+            <div className="mwidth">
+                <Carousel className="carousel-div-about" id="about">
+                    {Records.map((content, index) => {
+                        return (
+                            <Carousel.Item interval={5000000} key={index}>
+                                <div className="about-me carousel-item active" >
+                                    <p className="control-button">{content['title']}</p>
+                                    <div className="about-me">
 
-                                <img className="about-me-img" src={IMAGES[index]} alt="about" />
+                                        <img className="about-me-img" src={IMAGES[index]} alt="about" />
 
-                                <div className="about-me-text">
-                                    {content['content'].map((line, index) => {
-                                        return (
-                                            <p className="alice" key={line}> {line} < br /></p>
-                                        )
-                                    })}
+                                        <div className="about-me-text">
+                                            {content['content'].map((line, index) => {
+                                                return (
+                                                    <p className="alice" key={line}> {line} < br /></p>
+                                                )
+                                            })}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </Carousel.Item>
-                )
+                            </Carousel.Item>
+                        )
 
-            })
-            }
-        </Carousel >
+                    })
+                    }
+                </Carousel >
+            </div>
+        </div>
     );
 }
 /*

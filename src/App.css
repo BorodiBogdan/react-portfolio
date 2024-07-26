@@ -499,7 +499,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .carousel-div-about {
   background-size: cover;
-  min-height: 80vh;
+
+
 }
 
 .carousel-div-about {
@@ -509,7 +510,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .carousel-inner {
-  max-width: 1800px;
+  max-width: 1536px;
+  max-height: 700px;
 }
 
 
@@ -539,6 +541,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding-bottom: 50px;
   background: transparent;
   width: 100vw;
+  max-width: 1536px;
   display: flex;
   flex-direction: row;
   width: 80vw;
@@ -1021,4 +1024,16 @@ textarea {
   .author-div p {
     font-size: 10px;
   }
+}
+
+.mwidth {
+  max-width: 1536px;
+  max-height: 1000px;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
