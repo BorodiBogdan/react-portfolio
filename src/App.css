@@ -573,6 +573,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 25vw;
   border-radius: 10px;
   margin: 10px;
+  border: 2px solid rgba(255, 255, 255, 0);
 }
 
 .project-holder {
@@ -1028,7 +1029,6 @@ textarea {
 
 .mwidth {
   max-width: 1536px;
-  max-height: 1000px;
 }
 
 .center-content {
@@ -1036,4 +1036,12 @@ textarea {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
 }

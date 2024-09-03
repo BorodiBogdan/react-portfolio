@@ -31,6 +31,11 @@ function CreatePost() {
             date: currentDate(),
             author: { name: auth.currentUser.displayName, id: auth.currentUser.uid }
         });
+
+        setTitle("");
+        setPostText("");
+        setDescription("");
+        setImageLink("");
     }
 
     return (

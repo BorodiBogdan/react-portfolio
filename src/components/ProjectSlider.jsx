@@ -59,7 +59,7 @@ export function ProjectSlider() {
                                                         <a href={project.href} target="new" className="project-button">
                                                             <h1 className="Project-Title">{project.title}</h1>
                                                         </a>
-                                                        <p className="Project-Description">&nbsp;&nbsp;&nbsp;&nbsp;{project.description}</p>
+                                                        <p className="Project-Description" dangerouslySetInnerHTML={{ __html: project.description }}></p>
                                                     </div>
                                                 </motion.div>
 

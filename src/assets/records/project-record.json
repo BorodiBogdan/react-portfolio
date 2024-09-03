@@ -1,13 +1,27 @@
 [
     {
+        "id": 0,
+        "title": "Stock Pulse",
+        "description": "Developed a real-time stock watchlist application enabling users to track live stock data, manage portfolios, and securely share them with others, featuring strong authentication and session management.<br/><br/> Implemented key features including dynamic analytics integration, portfolio sharing, and efficient data management using RESTful APIs, achieving seamless user interaction and a 98+ Google Lighthouse performance score.",
+        "alt": "StockPulse",
+        "href": "https://github.com/BorodiBogdan/StockPulse"
+    },
+    {
         "id": 1,
+        "title": "Local Movie Database",
+        "alt": "Local Movie Database",
+        "href": "https://github.com/BorodiBogdan/Local-Movie-Database",
+        "description": "Designed an interactive learning application for high school students and integrated various learning modules with adaptivecontent. Successfully increased student understanding of complex algorithms by over 30%.<br>Exposed to C#, SQL"
+    },
+    {
+        "id": 2,
         "title": "Learning app",
         "description": "An app built using C# and and SQL for the database. The app is a learning platform where users can create an account, log in, see the lessons and some animations designed to help them understand the concepts. The app has an admin mode where the admin can add, delete or update the lessons. The source code is on GitHub.",
         "alt": "Learning App",
         "href": "https://github.com/BorodiBogdan/Interactive-learning-app"
     },
     {
-        "id": 2,
+        "id": 5,
         "title": "SoftOpia",
         "alt": "Softopia",
         "description": "A website build with HTML, CSS, JavaScript and Nunjucks. It's a website which presents a company that offers software development services. The website is responsive and has a modern design. It has a contact form and a blog section. The blog section is dynamic and the articles are stored in a MD file. The website is hosted on Netlify",
