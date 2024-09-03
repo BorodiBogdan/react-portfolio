@@ -13,6 +13,7 @@ import { useState, useEffect } from 'react';
 import { getDocs, collection } from "firebase/firestore";
 import Footer from './components/Footer';
 import ReactLoading from 'react-loading';
+import { set } from 'lodash';
 
 function App() {
   const [postLists, setPostList] = useState([]);
@@ -21,9 +22,13 @@ function App() {
 
   useEffect(() => {
     const getPost = async () => {
-      const data = await getDocs(postsCollectionRef);
-      setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))); // Grab the post information
-      setLoading(false); // Set loading to false once data is fetched
+      try {
+        const data = await getDocs(postsCollectionRef);
+        setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))); // Grab the post information
+        setLoading(false); // Set loading to false once data is fetched
+      } catch (error) {
+        setLoading(false);
+      }
     };
 
     getPost();
