@@ -11,12 +11,12 @@
         "title": "Local Movie Database",
         "alt": "Local Movie Database",
         "href": "https://github.com/BorodiBogdan/Local-Movie-Database",
-        "description": "Designed an interactive learning application for high school students and integrated various learning modules with adaptivecontent. Successfully increased student understanding of complex algorithms by over 30%.<br>Exposed to C#, SQL"
+        "description": "Designed an interactive learning application for high school students and integrated various learning modules with adaptivecontent. Successfully increased student understanding of complex algorithms by over 30%.<br/><br/>Exposed to C#, SQL"
     },
     {
         "id": 2,
         "title": "Learning app",
-        "description": "An app built using C# and and SQL for the database. The app is a learning platform where users can create an account, log in, see the lessons and some animations designed to help them understand the concepts. The app has an admin mode where the admin can add, delete or update the lessons. The source code is on GitHub.",
+        "description": "An app built using C# and and SQL for the database.<br/><br/> The app is a learning platform where users can create an account, log in, see the lessons and some animations designed to help them understand the concepts. <br/><br/>The app has an admin mode where the admin can add, delete or update the lessons. The source code is on GitHub.",
         "alt": "Learning App",
         "href": "https://github.com/BorodiBogdan/Interactive-learning-app"
     },
@@ -24,21 +24,21 @@
         "id": 5,
         "title": "SoftOpia",
         "alt": "Softopia",
-        "description": "A website build with HTML, CSS, JavaScript and Nunjucks. It's a website which presents a company that offers software development services. The website is responsive and has a modern design. It has a contact form and a blog section. The blog section is dynamic and the articles are stored in a MD file. The website is hosted on Netlify",
+        "description": "A website build with HTML, CSS, JavaScript and Nunjucks.<br/><br/> It's a website which presents a company that offers software development services.<br/><br/> The website is responsive and has a modern design. It has a contact form and a blog section. The blog section is dynamic and the articles are stored in a MD file. The website is hosted on Netlify",
         "href": "https://softopia.netlify.app"
     },
     {
         "id": 3,
         "title": "Math Universe",
         "alt": "Math Universe",
-        "description": "A Java game made using the Greenfoot framework for a national Greenfoot contest in Romania with Mogovan Jonathan. The game has four universes: addition, subtraction, multiplication and division. The player must solve math question in order to win, after the game has ended, on the screen will be displayed the missed questions and the accuaracy. The game has a tutorial and the player can choose it's character.",
+        "description": "A Java game made using the Greenfoot framework for a national Greenfoot contest in Romania with Mogovan Jonathan. <br/><br/>The game has four universes: addition, subtraction, multiplication and division. The player must solve math question in order to win, after the game has ended, on the screen will be displayed the missed questions and the accuaracy.<br/><br/>The game has a tutorial and the player can choose it's character.",
         "href": "https://www.youtube.com/watch?v=FnQ0Ldpwfo8"
     },
     {
         "id": 4,
         "title": "Personal Website",
         "alt": "My website",
-        "description": "My personal webpage build using React.js. The website is responsive and has a modern design. Here you can find informations about me and my projects. If you want to contact me, read my resume or just to see some of my work you can come here. The source code is on GitHub.",
+        "description": "My personal webpage build using React.js.<br/><br/> The website is responsive and has a modern design. Here you can find informations about me and my projects. <br/><br/>If you want to contact me, read my resume or just to see some of my work you can come here. The source code is on GitHub.",
         "href": "https://github.com/BorodiBogdan/react-portofolio"
     }
 ]
