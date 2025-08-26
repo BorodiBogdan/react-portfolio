@@ -10,6 +10,14 @@ export function Banner() {
     typeSpeed: 120,
     deleteSpeed: 80,
   });
+  // Calculate age based on birthdate
+  const birthDate = new Date(2004, 10, 24); // Months are 0-indexed: 10 = November
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
   return (
     <section id="home" className="banner">
       <Container className="hero-container">
@@ -22,7 +30,7 @@ export function Banner() {
             <p>
               Hey there! I go by the name <strong>Borodi Bogdan</strong>, though
               my buddies know me as <strong>Bob</strong>. Currently, I'm a
-              20-year-old student from
+              <strong> {age}-year-old</strong> student from
               <strong> Bistrita, Romania</strong>
               I'm on the journey towards earning my{" "}
               <strong>Bachelor's Degree in Computer Science</strong> at{" "}

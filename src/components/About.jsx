@@ -1,39 +1,62 @@
 import IMAGES from "../assets/records/about-images";
 import Records from "../assets/records/about-record.json";
-import Carousel from 'react-bootstrap/Carousel';
+import Carousel from "react-bootstrap/Carousel";
 
 export function About() {
-    return (
-        <div className="center-content">
-            <div className="mwidth">
-                <Carousel className="carousel-div-about" id="about">
-                    {Records.map((content, index) => {
+  // Calculate age
+  const birthDate = new Date(2004, 10, 24); // November 24, 2004
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return (
+    <div className="center-content">
+      <div className="mwidth">
+        <Carousel className="carousel-div-about" id="about">
+          {Records.map((content, recordIdx) => {
+            return (
+              <Carousel.Item interval={5000000} key={recordIdx}>
+                <div className="about-me carousel-item active">
+                  <p className="control-button">{content["title"]}</p>
+                  <div className="about-me">
+                    <img
+                      className="about-me-img"
+                      src={IMAGES[recordIdx]}
+                      alt="about"
+                    />
+                    <div className="about-me-text">
+                      {content["content"].map((line, lineIdx) => {
+                        // Only for the first record and first line, inject the birthdate after the age
+                        if (recordIdx === 0 && lineIdx === 0) {
+                          const parts = line.split("{age}");
+                          return (
+                            <p className="alice" key={line}>
+                              {parts[0]}
+                              {age}
+                              {parts[1]}
+                              <br />
+                            </p>
+                          );
+                        }
                         return (
-                            <Carousel.Item interval={5000000} key={index}>
-                                <div className="about-me carousel-item active" >
-                                    <p className="control-button">{content['title']}</p>
-                                    <div className="about-me">
-
-                                        <img className="about-me-img" src={IMAGES[index]} alt="about" />
-
-                                        <div className="about-me-text">
-                                            {content['content'].map((line, index) => {
-                                                return (
-                                                    <p className="alice" key={line}> {line} < br /></p>
-                                                )
-                                            })}
-                                        </div>
-                                    </div>
-                                </div>
-                            </Carousel.Item>
-                        )
-
-                    })
-                    }
-                </Carousel >
-            </div>
-        </div>
-    );
+                          <p className="alice" key={line}>
+                            {" "}
+                            {line} <br />
+                          </p>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </Carousel.Item>
+            );
+          })}
+        </Carousel>
+      </div>
+    </div>
+  );
 }
 /*
 import { useEffect, useState } from "react";
