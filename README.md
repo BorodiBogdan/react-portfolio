@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Personal Website – Bogdan Borodi
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal website! This website serves as a portfolio and a showcase of my skills, projects, and professional experiences.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The website was built using **React** for the frontend, **Firebase** for backend services such as authentication and database management, and it is hosted on **Netlify**. It is designed to be fast, responsive, and a clean representation of my personal and professional background.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **About Me**: A section dedicated to introducing myself, my background, and my professional journey.
+- **Projects**: A detailed overview of the projects I’ve worked on, including technologies used and challenges solved.
+- **Blog**: A regularly updated blog where I share insights on technology, development practices, and personal reflections on my journey as a developer.
+- **Responsive Design**: The site is fully responsive and accessible on all device types.
+- **Portfolio Showcase**: A visually appealing gallery of my best works and achievements.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Blog
 
-### `npm test`
+My blog, available [here](https://borodibogdan.com/blog), is a space where I share my thoughts on technology, programming, and personal growth. Topics include tutorials, industry insights, reflections on development trends, and lessons learned throughout my journey. The blog is regularly updated and serves as an extension of my portfolio, offering visitors a deeper look into my knowledge and experiences.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **Frontend**: Built using **React**, a powerful JavaScript library for building user interfaces.
+- **Backend**: Integrated with **Firebase**, providing real-time data and authentication services.
+- **Hosting**: Deployed and hosted using **Netlify**, ensuring fast load times and reliability.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Website Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Home Page**: A landing page with a quick summary and a visual intro to who I am and what I do.
+2. **About Section**: A more in-depth look at my journey, skills, and expertise.
+3. **Projects Section**: A showcase of my portfolio projects with descriptions, technologies, and links.
+4. **Blog**: Insights on technology, programming, and personal reflections.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How It Was Made
 
-### `npm run eject`
+This website was developed with a focus on simplicity, performance, and showcasing my skills as a developer:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React**: The website is entirely built in React, which allows for dynamic component-based UI updates, providing a seamless user experience.
+- **Firebase**: Firebase was used to handle backend features such as authentication (if needed) and storing blog posts.
+- **Netlify**: The site is deployed on Netlify, offering continuous deployment and fast global delivery.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Live Demo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+You can check out the live site [here](https://borodibogdan.com/).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This website is a reflection of my personal growth and the projects I have worked on. Feel free to explore the blog, check out my portfolio, and thank you for visiting!

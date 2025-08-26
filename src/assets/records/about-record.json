@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "ABOUT ME",
+    "content": [
+      "Hey there! My name is Borodi Bogdan, but my closest friends call me Bob. I am a 20-year-old student from Bistrita, Romania passionate about tech.",
+      "My journey into programming began during high school, sparking a fire within me for all things tech. ",
+      "The first language programming i have ever used was C++, during informatics classes in high school. Since then, I explored several languages and technologies like C#, Python, 80x86 Assembly, React and so on.",
+      "Outside of coding, I'm passionate about sports and fitness. Music also holds a special place in my heart."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "EDUCATION",
+    "content": [
+      " I completed my secondary education at National College Liviu Rebreanu - Bistrița, where I distinguished myself with exceptional results, particularly in the field of informatics.",
+      " My academic performance and disciplined approach were recognized through a scholarship from CJ Bistrița-Năsăud, underscoring my commitment to excellence.",
+      "Currently, I am enrolled at Babeș-Bolyai University (BBU) in Cluj-Napoca, pursuing a Bachelor's degree in Computer Science.",
+      "I am proud to share that I rank among the top 10% of students in my faculty."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "QPillars",
+    "content": [
+      "QPillars played an important role in my growth as a software engineer. It was my first job, where I worked for six months, learned a lot, met amazing people, and truly enjoyed the experience. I am especially grateful to my manager, Iacob, for trusting me and giving me this opportunity",
+      "Here are some cool things I achieved here:",
+      "Refined UX by simplifying navigation and key workflows for a medical app, boosting engagement across 2,000+ users.",
+      "Contributed to the development of the company website. Improved productivity by 30% through the implementation of efficient content management systems.",
+      "Improved backend data retrieval by implementing incremental fetching, reducing cutting data transfer time by ~85%."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Microsoft",
+    "content": [
+      "I had the opportunity to intern at Microsoft from July to October 2026. It was an amazing experience where I sharpened my technical skills, learned how to collaborate effectively in a global team, and got a real taste of working on impactful projects at scale.",
+      "Here are some cool things I achieved here:",
+      "Enhanced DRI Copilot, Microsoft’s internal AI assistant for on-call engineers, by integrating resilience data.",
+      "Developed automation to correlate reliability signals (metrics, logs, and failure patterns), which streamlined incident triage.",
+      "Partnered with SREs and DRIs to embed Copilot into standard incident response processes, achieving 80%+ adoption."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "EXTRA ACTIVITIES",
+    "content": [
+      "Over the past three years, I have earned three medals in the prestigious National Olympiad of Informatics, showcasing my proficiency and expertise in the discipline.",
+      "Furthermore, I am deeply committed to sharing my knowledge and expertise with others. I am currently serving as a mentor and educator for Z-builders, where I teach students how to code in C++ as well as fundamental data structures and algorithms.",
+      "Grigore Moisil Scientific Committee Member - Contributed to Romanias prestigious informatics contest (30+ years) by designing problems, tests, and solutions.",
+      "I'm involved in PbInfo, Romania's top problem-solving platform. I've designed tests and solutions that were used of over 20K+ students."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "SKILLS",
+    "content": [
+      "Strong foundation in Data Structures and Algorithms.",
+      "Fluent in C++, C#, React, Python, 80x86 Assembly, and more.",
+      "Solid understanding of System Design, OOP, Regex, Multithreading, Concurrent Programming, LLMs, and RAG Systems.",
+      "Proficient English speaker with excellent communication skills.",
+      "Highly curious and passionate about exploring new technologies.",
+      "Strong social and teamwork abilities, with a natural drive to connect and collaborate."
+    ]
+  }
+]

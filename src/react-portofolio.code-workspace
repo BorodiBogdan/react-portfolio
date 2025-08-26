@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "react-portofolio",
+			"path": ".."
+		},
+		{
+			"name": "node_modules",
+			"path": "../../../../../web-dev-projects/personal-portfolio/node_modules"
+		}
+	],
+	"settings": {}
+}
