@@ -665,7 +665,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project-image {
   display: block;
   width: 100%;
-  height: fit-content;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -971,6 +973,11 @@ textarea {
     width: 80vw;
   }
 
+  .project-image {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
   .left {
     display: none;
   }
@@ -1074,6 +1081,15 @@ textarea {
 
   .author-div p {
     font-size: 10px;
+  }
+
+  .project-image {
+    max-height: 180px;
+    object-fit: cover;
+  }
+
+  .project-holder-active {
+    width: 90vw;
   }
 }
 
