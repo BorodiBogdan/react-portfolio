@@ -1,6 +1,5 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/poza-eu.jpg";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 export function Banner() {
