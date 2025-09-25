@@ -1,19 +1,19 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import HomePage from './components/HomePage';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import NavBar from './components/NavBar';
-import PageNotFound from './components/PageNotFound';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import HomePage from "./components/HomePage";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import PageNotFound from "./components/PageNotFound";
 import Blog from "./components/Blog";
-import Admin from './components/Admin';
-import CreatePost from './components/CreatePost';
+import Admin from "./components/Admin";
+import CreatePost from "./components/CreatePost";
 import { db } from "./firebase-confing";
-import BlogPost from './components/blog-page';
-import { useState, useEffect } from 'react';
+import BlogPost from "./components/blog-page";
+import { useState, useEffect } from "react";
 import { getDocs, collection } from "firebase/firestore";
-import Footer from './components/Footer';
-import ReactLoading from 'react-loading';
-import { set } from 'lodash';
+import Footer from "./components/Footer";
+import ReactLoading from "react-loading";
+import { set } from "lodash";
 
 function App() {
   const [postLists, setPostList] = useState([]);
@@ -44,12 +44,16 @@ function App() {
           <Route path="/" exact component={HomePage} />
           <Route path="/blog" exact component={Blog} />
           <Route path="/admin" exact component={Admin} />
-          {userName === "Bogdan Borodi" ? <Route path="/post" exact component={CreatePost} /> : ""}
+          {userName === "Bogdan Borodi" ? (
+            <Route path="/post" exact component={CreatePost} />
+          ) : (
+            ""
+          )}
           {postLists.map((post) => {
             return (
               <Route
                 key={post.id}
-                path={'/' + post.title}
+                path={"/blog/" + post.title}
                 render={() => (
                   <BlogPost
                     title={post.title}
@@ -66,7 +70,12 @@ function App() {
         </Switch>
       ) : (
         <div className="loading">
-          <ReactLoading type="spin" color={"#ffffff"} height={'5%'} width={'5%'} />
+          <ReactLoading
+            type="spin"
+            color={"#ffffff"}
+            height={"5%"}
+            width={"5%"}
+          />
         </div>
       )}
       <Footer />
