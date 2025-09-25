@@ -23,22 +23,21 @@
     "id": 3,
     "title": "QPillars",
     "content": [
-      "QPillars played an important role in my growth as a software engineer. It was my first job, where I worked for six months, learned a lot, met amazing people, and truly enjoyed the experience. I am especially grateful to my manager, Iacob, for trusting me and giving me this opportunity",
-      "Here are some cool things I achieved here:",
-      "Refined UX by simplifying navigation and key workflows for a medical app, boosting engagement across 2,000+ users.",
-      "Contributed to the development of the company website. Improved productivity by 30% through the implementation of efficient content management systems.",
-      "Improved backend data retrieval by implementing incremental fetching, reducing cutting data transfer time by ~85%."
+      "QPillars played an important role in my growth as a software engineer. It was my first job, where I worked for six months learned a lot and met amazing people",
+      "I am especially grateful to my manager, Iacob, for trusting me and giving me this opportunity",
+      "• Refined UX by simplifying navigation and key workflows, boosting engagement across 2,000+ users.",
+      "• Improved backend data retrieval by implementing incremental fetching, reducing cutting data transfer time by ~85%."
     ]
   },
   {
     "id": 4,
     "title": "Microsoft",
     "content": [
-      "I had the opportunity to intern at Microsoft from July to October 2026. It was an amazing experience where I sharpened my technical skills, learned how to collaborate effectively in a global team, and got a real taste of working on impactful projects at scale.",
+      "I had the opportunity to intern at Microsoft from July to October 2025.",
+      "It was an amazing experience where I sharpened my technical skills and learned how to collaborate in a large team.",
       "Here are some cool things I achieved here:",
-      "Enhanced DRI Copilot, Microsoft’s internal AI assistant for on-call engineers, by integrating resilience data.",
-      "Developed automation to correlate reliability signals (metrics, logs, and failure patterns), which streamlined incident triage.",
-      "Partnered with SREs and DRIs to embed Copilot into standard incident response processes, achieving 80%+ adoption."
+      "• Enhanced Microsoft’s internal AI assistant for on-call engineers, by integrating resilience data.",
+      "• Developed automation to correlate reliability signals (metrics, logs, and failure patterns), which streamlined incident triage."
     ]
   },
   {
@@ -46,9 +45,8 @@
     "title": "EXTRA ACTIVITIES",
     "content": [
       "Over the past three years, I have earned three medals in the prestigious National Olympiad of Informatics, showcasing my proficiency and expertise in the discipline.",
-      "Furthermore, I am deeply committed to sharing my knowledge and expertise with others. I am currently serving as a mentor and educator for Z-builders, where I teach students how to code in C++ as well as fundamental data structures and algorithms.",
-      "Grigore Moisil Scientific Committee Member - Contributed to Romanias prestigious informatics contest (30+ years) by designing problems, tests, and solutions.",
-      "I'm involved in PbInfo, Romania's top problem-solving platform. I've designed tests and solutions that were used of over 20K+ students."
+      "Furthermore, I am deeply committed to sharing my knowledge and expertise with others. I am currently serving as a mentor and educator for Z-builders, where I teach students how to code in C++.",
+      "Grigore Moisil Scientific Committee Member - Contributed to Romanias prestigious informatics contest (30+ years) by designing problems, tests, and solutions."
     ]
   },
   {
