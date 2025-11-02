@@ -583,6 +583,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .container-title {
   font-family: Impact, "Arial Narrow Bold", sans-serif;
   font: bold;
+  padding-bottom: 30px;
 }
 
 .align-the-title {
@@ -1110,4 +1111,275 @@ textarea {
   align-items: center;
   height: 100vh;
   width: 100%;
+}
+
+/* ==== Experience / Timeline Styles ==== */
+.experience-section {
+  padding: 60px 20px;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.experience-section .container-title {
+  font-size: 36px;
+  margin-bottom: 8px;
+  color: #fff;
+  text-align: center;
+}
+
+.experience-intro {
+  color: #b8b8b8;
+  margin-bottom: 28px;
+  max-width: 820px;
+}
+
+.timeline {
+  position: relative;
+  margin: 20px 0 40px 0;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 32px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(170, 54, 124, 0.9),
+    rgba(74, 47, 189, 0.9)
+  );
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 18px 0 28px 70px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-badge {
+  position: absolute;
+  left: -48px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #aa367c, #4a2fbd);
+  box-shadow: 0 0 12px rgba(74, 47, 189, 0.25);
+  border: 3px solid rgba(0, 0, 0, 0.25);
+}
+
+.timeline-panel {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 18px 22px;
+  border-radius: 12px;
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.timeline-date {
+  color: #b8b8b8;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.timeline-title {
+  color: #fff;
+  margin: 0;
+  font-size: 20px;
+}
+
+.timeline-org {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 4px 0 12px 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.timeline-body p {
+  color: #d0d0d0;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 800px) {
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline::before {
+    left: 16px;
+  }
+
+  .timeline-item {
+    margin-left: 56px;
+  }
+
+  .timeline-badge {
+    left: -40px;
+  }
+}
+
+/* Experience control buttons */
+.exp-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-btn {
+  background: transparent;
+  color: #b8b8b8;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.18s ease-in-out;
+}
+
+.exp-btn:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.exp-btn.active {
+  color: #121212;
+  background: linear-gradient(90deg, #aa367c, #4a2fbd);
+  border-color: transparent;
+}
+
+/* Minimal center-line timeline */
+.timeline-min {
+  position: relative;
+  margin-top: 10px;
+}
+
+.timeline-min .timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.timeline-row {
+  position: relative;
+  width: 50%;
+  padding: 18px 24px;
+  display: flex; /* allow aligning content toward the line */
+}
+
+.timeline-row.tl-left {
+  margin-right: 50%;
+  text-align: left;
+  padding-right: 56px;
+  justify-content: flex-end; /* pull content toward the center line */
+}
+
+.timeline-row.tl-right {
+  margin-left: 50%;
+  text-align: left;
+  padding-left: 56px;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #aa367c, #4a2fbd);
+  box-shadow: 0 0 0 3px rgba(170, 54, 124, 0.12);
+}
+
+/* Place the dot on the center line for each side and keep a small gap */
+.timeline-row.tl-left .timeline-dot {
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+.timeline-row.tl-right .timeline-dot {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.timeline-content {
+  max-width: 520px;
+}
+
+/* Ensure a small horizontal gap between the dot (center line) and text */
+.timeline-row.tl-right .timeline-content {
+  margin-left: 12px;
+}
+.timeline-row.tl-left .timeline-content {
+  margin-right: 12px; /* small gap from the line */
+  margin-left: 0; /* ensure no extra push away from the line */
+}
+
+.tl-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.tl-org {
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 6px;
+}
+
+.tl-date {
+  color: #b8b8b8;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 800px) {
+  .timeline-min .timeline-line {
+    left: 28px;
+  }
+  .timeline-row,
+  .timeline-row.tl-left,
+  .timeline-row.tl-right {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    padding-left: 64px; /* keeps space from the center line */
+    padding-right: 16px;
+  }
+  .timeline-row {
+    display: block;
+  } /* revert flex on mobile for simple stack */
+  .timeline-row.tl-left {
+    padding-right: 64px;
+  }
+  .timeline-row.tl-right {
+    padding-left: 64px;
+  }
+  .timeline-row.tl-left .timeline-dot,
+  .timeline-row.tl-right .timeline-dot {
+    left: 28px;
+    transform: translate(-50%, -50%);
+  }
+  /* Keep mobile titles perfectly aligned regardless of odd/even index */
+  .timeline-row.tl-right .timeline-content,
+  .timeline-row.tl-left .timeline-content {
+    margin-left: 16px;
+    margin-right: 0;
+  }
+  .timeline-dot {
+    left: 28px;
+  }
 }
