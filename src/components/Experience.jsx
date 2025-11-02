@@ -127,8 +127,6 @@ export function Experience() {
   return (
     <section id="experience" className="experience-section">
       <Container className="mwidth">
-        <h2 className="container-title">Qualifications</h2>
-
         <div
           className="exp-controls"
           role="tablist"

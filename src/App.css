@@ -1231,7 +1231,7 @@ textarea {
 .exp-controls {
   display: flex;
   gap: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 30px;
   align-items: center;
   justify-content: center;
 }
@@ -1256,6 +1256,22 @@ textarea {
   color: #121212;
   background: linear-gradient(90deg, #aa367c, #4a2fbd);
   border-color: transparent;
+}
+
+/* Mobile: keep filter buttons inside the screen */
+@media screen and (max-width: 800px) {
+  .exp-controls {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 12px; /* safe side padding */
+    justify-content: center;
+    max-width: 100%;
+    overflow-x: clip; /* prevent accidental horizontal scroll */
+  }
+  .exp-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
 }
 
 /* Minimal center-line timeline */
