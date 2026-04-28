@@ -1,24 +1,19 @@
-
-import { Col, Row, Container } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
 import { Link } from "react-router-dom";
+
 function PageNotFound() {
-    return (
-        <section id="home" className="banner">
-            <Container className="hero-container">
-                <Row className="add-line">
-                    <Col className="col">
-                        <h3 className="page-not-found-h3"><span className="purple-digit">4</span>0<span className="purple-digit">4</span> </h3>
-                        <h2 className="page-not-found-h2">Page not found!</h2>
-                        <Link to="/" style={{ textDecoration: 'none' }}><button><span className="tagline">Back Home</span></button></Link>
-                    </Col>
-                    <Col className="col image-of-me">
-                        <img className="" src={headerImg} alt="Header"></img>
-                    </Col>
-                </Row>
-            </Container>
-        </section>
-    )
+  return (
+    <section className="notfound">
+      <span className="notfound__num">// error 404</span>
+      <h1 className="notfound__title">Page not found</h1>
+      <p className="notfound__lede">
+        The route you tried doesn't exist. The link may be stale or the page
+        may have moved.
+      </p>
+      <Link className="btn" to="/">
+        ← Back home
+      </Link>
+    </section>
+  );
 }
 
 export default PageNotFound;
