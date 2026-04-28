@@ -1,115 +1,88 @@
+import { useState } from "react";
 import IMAGES from "../assets/records/about-images";
 import Records from "../assets/records/about-record.json";
-import Carousel from "react-bootstrap/Carousel";
+import useReveal from "./useReveal";
 
 export function About() {
-  // Calculate age
-  const birthDate = new Date(2004, 10, 24); // November 24, 2004
+  const [active, setActive] = useState(Records[0].id);
+
+  const birthDate = new Date(2004, 10, 24);
   const today = new Date();
   let age = today.getFullYear() - birthDate.getFullYear();
   const m = today.getMonth() - birthDate.getMonth();
-  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-    age--;
-  }
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) age--;
+
+  const ref = useReveal();
+  const recordIdx = Records.findIndex((r) => r.id === active);
+  const current = Records[recordIdx];
+
   return (
-    <div className="center-content">
-      <div className="mwidth">
-        <Carousel className="carousel-div-about" id="about">
-          {Records.map((content, recordIdx) => {
-            return (
-              <Carousel.Item interval={5000000} key={recordIdx}>
-                <div className="about-me carousel-item active">
-                  <p className="control-button">{content["title"]}</p>
-                  <div className="about-me">
-                    <img
-                      className="about-me-img"
-                      src={IMAGES[recordIdx]}
-                      alt="about"
-                    />
-                    <div className="about-me-text">
-                      {content["content"].map((line, lineIdx) => {
-                        // Only for the first record and first line, inject the birthdate after the age
-                        if (recordIdx === 0 && lineIdx === 0) {
-                          const parts = line.split("{age}");
-                          return (
-                            <p className="alice" key={line}>
-                              {parts[0]}
-                              {age}
-                              {parts[1]}
-                              <br />
-                            </p>
-                          );
-                        }
-                        return (
-                          <p className="alice" key={line}>
-                            {" "}
-                            {line} <br />
-                          </p>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-              </Carousel.Item>
-            );
-          })}
-        </Carousel>
+    <section id="about" className="section reveal" ref={ref}>
+      <div className="section-title-row">
+        <h2>
+          <span className="section-num">01.</span>
+          About me
+        </h2>
       </div>
-    </div>
+
+      <div className="about">
+        <div>
+          <div className="about__prose">
+            <p>
+              Hey — I'm <strong>Borodi Bogdan</strong>. I started programming
+              in <strong>C++</strong> in high school and never really stopped
+              tinkering. Today I'm a <strong>{age}-year-old</strong> CS student
+              at <strong>Babeș-Bolyai University</strong>, ranked in the top
+              10% of my faculty.
+            </p>
+            <p>
+              I just wrapped a software engineering internship at{" "}
+              <strong>Microsoft</strong> in Bucharest, where I worked on
+              internal AI tooling for on-call engineers. Before that I shipped
+              full-stack features at <strong>QPillars</strong> for two
+              thousand-plus users.
+            </p>
+            <p>
+              Outside of code: sport, music, and the occasional contest
+              problem.
+            </p>
+          </div>
+
+          <div className="about__tabs" role="tablist">
+            {Records.map((r) => (
+              <button
+                key={r.id}
+                role="tab"
+                aria-selected={active === r.id}
+                className={`about__tab${active === r.id ? " is-active" : ""}`}
+                onClick={() => setActive(r.id)}
+              >
+                {r.title}
+              </button>
+            ))}
+          </div>
+
+          <div className="about__panel" role="tabpanel" aria-live="polite">
+            {current.content.map((line, i) => {
+              const text =
+                recordIdx === 0 && i === 0 ? line.replace("{age}", age) : line;
+              return <p key={`${current.id}-${i}`}>{text}</p>;
+            })}
+          </div>
+        </div>
+
+        <div className="about__portrait-wrap">
+          <span className="about__portrait-frame" aria-hidden="true" />
+          <div className="about__portrait">
+            <img
+              src={IMAGES[Math.max(0, recordIdx)]}
+              alt="Borodi Bogdan"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
-/*
-import { useEffect, useState } from "react";
-import IMAGES from "../assets/records/about-images";
-import Records from "../assets/records/about-record.json";
 
-export function About() {
-    const [content, setContent] = useState(1);
-    const [txt, setTxt] = useState(Records[0]['content']);
-    const [img, setImg] = useState(IMAGES[0]);
-    const [active, setActive] = useState('about me');
-
-    const updateContent = (value, activeButton) => {
-        setContent(value);
-        setTxt(Records[value - 1]['content']);
-        setImg(IMAGES[value - 1]);
-        setActive(activeButton);
-    }
-
-    useEffect(() => {
-
-    }, [content]);
-
-
-    return (
-        <div className="about-container">
-            <div className="about-me-description">
-                <h1 className="about-me-title">About me!</h1>
-                <p>
-                    The console below is a summary of who I am, what I do and what I like.<br></br>
-                    Press the corresponding buttons to discover more about me
-                </p>
-            </div>
-            <div className="about-info">
-                <div className="controls">
-                    <p className={active == 'about me' ? "active-button control-button" : "control-button"} onClick={() => updateContent(1, 'about me')}>About me</p>
-                    <p className={active == 'education' ? "active-button control-button" : "control-button"} onClick={() => updateContent(2, 'education')}>Education</p>
-                    <p className={active == 'activities' ? "active-button control-button" : "control-button"} onClick={() => updateContent(3, 'activities')}>Extracuricullar activities</p>
-                    <p className={active == 'passions' ? "active-button control-button" : "control-button"} onClick={() => updateContent(4, 'passions')}>Passions</p>
-                    <p className={active == 'skills' ? "active-button control-button" : "control-button"} onClick={() => updateContent(5, 'skills')}>Skills</p>
-                </div>
-                <div className="about-me">
-                    <div className="about-me-img">
-                        <img src={img} alt="" />
-                    </div>
-                    <div className="about-me-text">
-                        <p className="alice">{txt}</p>
-                    </div>
-                </div>
-            </div>
-
-        </div >
-    )
-}
-*/
 export default About;

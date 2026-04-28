@@ -1,128 +1,115 @@
 import { useState, useEffect } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from "../assets/img/logo-white.png";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+
+const links = [
+  { id: "home", label: "Home", href: "/#home" },
+  { id: "about", label: "About", href: "/#about" },
+  { id: "experience", label: "Experience", href: "/#experience" },
+  { id: "work", label: "Work", href: "/#work" },
+  { id: "blog", label: "Writing", href: "/blog" },
+];
 
 export const NavBar = () => {
-  const [activeLink, setActiveLink] = useState("home");
   const location = useLocation();
-  /*const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  // in case we want a fixed nav bar we decomment line 40 and go to css and change position from absolute to fixed for navbar
   useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50 || window.innerWidth < 800) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    }
-
-    window.addEventListener("scroll", onScroll);
-
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [])
+  }, []);
 
-  */
-
-  // Update active link based on current route
   useEffect(() => {
-    const path = location.pathname;
-    const hash = location.hash;
-
-    if (path === "/blog" || path.startsWith("/blog/")) {
-      setActiveLink("blog");
-    } else if (path === "/" && hash === "#about") {
-      setActiveLink("about");
-    } else if (path === "/" && hash === "#projects") {
-      setActiveLink("projects");
-    } else if (path === "/" || hash === "#home" || path === "") {
-      setActiveLink("home");
-    } else {
-      // For any other routes (admin, post creation, etc.), don't highlight any nav item
-      setActiveLink("");
-    }
+    setOpen(false);
   }, [location]);
 
-  const onUpdateActiveLink = (value) => {
-    setActiveLink(value);
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  const isActive = (id) => {
+    const path = location.pathname;
+    const hash = location.hash;
+    if (id === "blog") return path === "/blog" || path.startsWith("/blog/");
+    if (path !== "/") return false;
+    if (id === "home") return !hash || hash === "#home";
+    return hash === `#${id}`;
   };
 
   return (
-    <Navbar
-      expand="md"
-      className={"nav-bar-min" /*scrolled ? "scrolled" : ""*/}
-    >
-      <Container>
-        <Navbar.Brand href="/">
-          <img className="navbar-logo" src={logo} alt="Logo" />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <span className="navbar-toggler-icon"></span>
-        </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link
-              href="/#home"
-              className={
-                activeLink === "home" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("home")}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              href="/#about"
-              className={
-                activeLink === "about" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("skills")}
-            >
-              About me
-            </Nav.Link>
-            <Nav.Link
-              href="/#projects"
-              className={
-                activeLink === "projects" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("projects")}
-            >
-              Projects
-            </Nav.Link>
-            <Nav.Link
-              href="/blog"
-              className={
-                activeLink === "blog" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("blog")}
-            >
-              Blog
-            </Nav.Link>
-          </Nav>
-          <span className="navbar-text">
-            <div className="social-icon">
-              <a href="https://www.linkedin.com/in/bogdan-borodi-b35724292/">
-                <img src={navIcon1} alt="linkedin" />
-              </a>
-              <a href="https://www.facebook.com/borodi.bogdan/">
-                <img src={navIcon2} alt="Facebook" />
-              </a>
-              <a href="https://www.instagram.com/borodi_bogdan/">
-                <img src={navIcon3} alt="instagram" />
-              </a>
-            </div>
-            <a href="https://docs.google.com/document/d/1vNJN-hetdqFCq2M7hYQS_vlkZDVqULwkp6OcizwAgi8/edit?tab=t.0">
-              <button className="vvd">
-                <span>resume</span>
-              </button>
+    <>
+      <header className={`nav${scrolled ? " scrolled" : ""}`}>
+        <Link to="/" className="nav__brand" aria-label="Home">
+          <span className="nav__brand-mark" aria-hidden="true">B</span>
+          <span>Borodi Bogdan</span>
+        </Link>
+
+        <nav aria-label="Primary">
+          <ul className="nav__links">
+            {links.map((l, i) => {
+              const num = String(i + 1).padStart(2, "0");
+              const active = isActive(l.id);
+              return (
+                <li key={l.id}>
+                  <a
+                    href={l.href}
+                    className={`nav__link${active ? " is-active" : ""}`}
+                  >
+                    <span className="nav__link-num">{num}.</span>
+                    <span>{l.label}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        <a
+          href="https://docs.google.com/document/d/1vNJN-hetdqFCq2M7hYQS_vlkZDVqULwkp6OcizwAgi8/edit?tab=t.0"
+          target="_blank"
+          rel="noreferrer"
+          className="nav__cta"
+        >
+          resume.pdf
+        </a>
+
+        <button
+          type="button"
+          className={`nav__toggle${open ? " is-open" : ""}`}
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span className="nav__toggle-bar" />
+        </button>
+      </header>
+
+      <div className={`nav__mobile${open ? " is-open" : ""}`} aria-hidden={!open}>
+        {links.map((l, i) => {
+          const num = String(i + 1).padStart(2, "0");
+          return (
+            <a key={l.id} href={l.href} className="nav__link">
+              <span className="nav__link-num">{num}.</span>
+              <span>{l.label}</span>
             </a>
-          </span>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+          );
+        })}
+        <a
+          href="https://docs.google.com/document/d/1vNJN-hetdqFCq2M7hYQS_vlkZDVqULwkp6OcizwAgi8/edit?tab=t.0"
+          target="_blank"
+          rel="noreferrer"
+          className="nav__cta"
+        >
+          resume.pdf
+        </a>
+      </div>
+    </>
   );
 };
+
 export default NavBar;

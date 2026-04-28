@@ -1,15 +1,17 @@
 import Banner from "./Banner";
+import About from "./About";
 import Experience from "./Experience";
 import ProjectSlider from "./ProjectSlider";
-import About from "./About";
+import Contact from "./Contact";
 
 function HomePage() {
   return (
     <div className="App">
       <Banner />
-      <Experience />
       <About />
+      <Experience />
       <ProjectSlider />
+      <Contact />
     </div>
   );
 }

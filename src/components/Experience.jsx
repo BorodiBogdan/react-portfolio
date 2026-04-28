@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Container } from "react-bootstrap";
+import useReveal from "./useReveal";
 
-// Minimal timeline entries (no descriptions)
 const entries = [
   {
     id: "freelance",
@@ -75,94 +74,79 @@ const entries = [
   },
 ];
 
+const filters = [
+  { id: "work", label: "Work" },
+  { id: "extracurricular", label: "Activities" },
+  { id: "education", label: "Education" },
+];
+
+const monthMap = {
+  Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+  Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11,
+};
+
+const parseEnd = (s) => {
+  if (!s) return 0;
+  const trimmed = s.trim();
+  if (/present/i.test(trimmed)) return Date.now();
+  const parts = trimmed.split(/—|–|-/).map((p) => p.trim());
+  const end = parts.length > 1 ? parts[1] : parts[0];
+  if (/present/i.test(end)) return Date.now();
+  const m = end.match(/([A-Za-z]{3,})\s+(\d{4})/);
+  if (m) {
+    const mon = monthMap[m[1].slice(0, 3)] ?? 11;
+    return new Date(parseInt(m[2], 10), mon, 1).getTime();
+  }
+  const y = end.match(/(\d{4})/);
+  if (y) return new Date(parseInt(y[1], 10), 11, 1).getTime();
+  return 0;
+};
+
 export function Experience() {
   const [active, setActive] = useState("work");
-
-  const filters = [
-    { id: "work", label: "Work" },
-    { id: "extracurricular", label: "Extracurricular" },
-    { id: "education", label: "Education" },
-  ];
-
-  // Helper: parse end date and return timestamp (handles 'Present')
-  const parseEndTimestamp = (dateStr) => {
-    if (!dateStr) return 0;
-    const s = dateStr.trim();
-    if (/present/i.test(s)) return Date.now();
-    const parts = s.split(/—|–|-/).map((p) => p.trim());
-    const endPart = parts.length > 1 ? parts[1] : parts[0];
-    if (/present/i.test(endPart)) return Date.now();
-    const m = endPart.match(/([A-Za-z]{3,})\s+(\d{4})/);
-    const monthMap = {
-      Jan: 0,
-      Feb: 1,
-      Mar: 2,
-      Apr: 3,
-      May: 4,
-      Jun: 5,
-      Jul: 6,
-      Aug: 7,
-      Sep: 8,
-      Oct: 9,
-      Nov: 10,
-      Dec: 11,
-    };
-    if (m) {
-      const mon = m[1].slice(0, 3);
-      const year = parseInt(m[2], 10);
-      const month = monthMap[mon] ?? 11;
-      return new Date(year, month, 1).getTime();
-    }
-    const y = endPart.match(/(\d{4})/);
-    if (y) return new Date(parseInt(y[1], 10), 11, 1).getTime();
-    return 0;
-  };
-
-  // sort newest first
-  const sortedEntries = entries
-    .slice()
-    .sort((a, b) => parseEndTimestamp(b.date) - parseEndTimestamp(a.date));
-  const visible = sortedEntries.filter((e) => e.category === active);
+  const ref = useReveal();
+  const visible = entries
+    .filter((e) => e.category === active)
+    .sort((a, b) => parseEnd(b.date) - parseEnd(a.date));
 
   return (
-    <section id="experience" className="experience-section">
-      <Container className="mwidth">
-        <div
-          className="exp-controls"
-          role="tablist"
-          aria-label="Experience sections"
-        >
+    <section id="experience" className="section reveal" ref={ref}>
+      <div className="section-title-row">
+        <h2>
+          <span className="section-num">02.</span>
+          Where I've worked
+        </h2>
+      </div>
+
+      <div className="exp">
+        <div className="exp__tabs" role="tablist" aria-label="Experience filter">
           {filters.map((f) => (
             <button
               key={f.id}
-              className={"exp-btn " + (active === f.id ? "active" : "")}
+              role="tab"
+              aria-selected={active === f.id}
+              className={`exp__tab${active === f.id ? " is-active" : ""}`}
               onClick={() => setActive(f.id)}
-              aria-pressed={active === f.id}
             >
               {f.label}
             </button>
           ))}
         </div>
 
-        <div className="timeline-min">
-          <div className="timeline-line" aria-hidden="true"></div>
-          {visible.map((e, idx) => (
-            <div
-              className={`timeline-row ${
-                idx % 2 === 0 ? "tl-left" : "tl-right"
-              }`}
-              key={e.id}
-            >
-              <span className="timeline-dot" aria-hidden="true"></span>
-              <div className="timeline-content">
-                <h3 className="tl-title">{e.title}</h3>
-                <p className="tl-org">{e.org}</p>
-                <p className="tl-date">{e.date}</p>
-              </div>
-            </div>
-          ))}
+        <div className="exp__panel" role="tabpanel">
+          <div className="exp__list">
+            {visible.map((e) => (
+              <article className="exp__item" key={e.id}>
+                <span className="exp__item-date">{e.date}</span>
+                <div>
+                  <h3 className="exp__item-title">{e.title}</h3>
+                  <p className="exp__item-org">{e.org}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

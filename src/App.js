@@ -1,5 +1,4 @@
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import HomePage from "./components/HomePage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./components/NavBar";
@@ -13,7 +12,7 @@ import { useState, useEffect } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import Footer from "./components/Footer";
 import ReactLoading from "react-loading";
-import { set } from "lodash";
+import { LeftRail, RightRail } from "./components/Rails";
 
 function App() {
   const [postLists, setPostList] = useState([]);
@@ -35,19 +34,21 @@ function App() {
   }, [postsCollectionRef]); // Add postsCollectionRef as a dependency
 
   const userName = localStorage.getItem("name");
+  const adminName = process.env.REACT_APP_ADMIN_NAME;
+  const isAdmin = Boolean(adminName) && userName === adminName;
 
   return (
     <Router>
       <NavBar />
+      <LeftRail />
+      <RightRail />
       {!loading ? (
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/blog" exact component={Blog} />
           <Route path="/admin" exact component={Admin} />
-          {userName === "Bogdan Borodi" ? (
+          {isAdmin && (
             <Route path="/post" exact component={CreatePost} />
-          ) : (
-            ""
           )}
           {postLists.map((post) => {
             return (
