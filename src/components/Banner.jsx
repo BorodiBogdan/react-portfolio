@@ -2,10 +2,11 @@ import { useTypewriter } from "react-simple-typewriter";
 
 export function Banner() {
   const [text] = useTypewriter({
-    words: ["Borodi Bogdan.", "Bob.", "a CS student."],
-    loop: {},
-    typeSpeed: 95,
-    deleteSpeed: 55,
+    words: ["Borodi Bogdan"],
+    loop: true,
+    typeSpeed: 70,
+    deleteSpeed: 35,
+    delaySpeed: 800,
   });
 
   const birthDate = new Date(2004, 10, 24);
@@ -20,7 +21,7 @@ export function Banner() {
 
       <h1 className="hero__name">
         {text}
-        <span className="hero__name-cursor" aria-hidden="true">_</span>
+        <span className="hero__name-cursor" aria-hidden="true" />
       </h1>
 
       <h2 className="hero__tagline">I build software.</h2>
