@@ -1,5 +1,5 @@
 const IMAGES = {
-  0: require("../img/poza-eu.jpg"),
+  0: require("../img/poza.jpeg"),
   1: require("../img/education.jpg"),
   2: require("../img/QPillars-logo.png"),
   3: require("../img/microsoft.jpeg"),
