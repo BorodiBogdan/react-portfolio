@@ -1,13 +1,13 @@
 [
   {
-    "id": 0,
+    "id": 1,
     "title": "Stock Pulse",
-    "description": "Developed a real-time stock watchlist application enabling users to track live stock data, manage portfolios, and securely share them with others, featuring strong authentication and session management.<br/><br/> Implemented key features including dynamic analytics integration, portfolio sharing, and efficient data management using RESTful APIs, achieving seamless user interaction and a 98+ Google Lighthouse performance score.",
+    "description": "Real-time stock watchlist app for tracking live data, managing portfolios, and securely sharing them, with strong authentication and session management.<br/><br/>Built on RESTful APIs with dynamic analytics, hitting a 98+ Google Lighthouse score.",
     "alt": "StockPulse",
     "href": "https://github.com/BorodiBogdan/StockPulse"
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "UBB-SE-2025",
     "alt": "Team Project",
     "description": "Worked as Technical Team Lead making sure everything ran smoothly through PR reviews and team coordination.<br/><br/>Built the complete system: database, API, backend, web app, and desktop app, all connected to the same backend I designed.<br/><br/>Presented the project in front of 150+ people and secured the top grade.",
@@ -21,11 +21,25 @@
     "description": "Designed an interactive learning application for high school students and integrated various learning modules with adaptivecontent.<br/><br/> Successfully increased student understanding of complex algorithms by over 30%.<br/><br/>Exposed to C#, SQL"
   },
   {
-    "id": 2,
+    "id": 0,
+    "title": "MerchStory",
+    "alt": "MerchStory",
+    "description": "Full-stack mobile app turning product photos into AI-generated ads, catalogs, and wallpapers. Adopted by a local retailer, driving 10,000+ social impressions.<br/><br/>A two-role agentic system sets the marketing angle and writes promotions from external signals.<br/><br/>Deployed on Azure with Redis caching and a pipeline keeping real products at 100% pixel fidelity.",
+    "href": "https://github.com/BorodiBogdan/MerchStory"
+  },
+  {
+    "id": 7,
     "title": "Learning app",
     "description": "An app built using C# and and SQL for the database.<br/><br/> The app is a learning platform where users can create an account, log in, see the lessons and some animations designed to help them understand the concepts. <br/><br/>The app has an admin mode where the admin can add, delete or update the lessons. The source code is on GitHub.",
     "alt": "Learning App",
     "href": "https://github.com/BorodiBogdan/Interactive-learning-app"
+  },
+  {
+    "id": 8,
+    "title": "N-body Simulation",
+    "alt": "N-body Simulation",
+    "description": "A gravitational N-body simulation for a parallel & distributed programming course at UBB.<br/><br/>Two parallel implementations: shared memory with C++20 threads and distributed with MPI, plus checkpoint/restart for fault tolerance.",
+    "href": "https://github.com/BorodiBogdan/N-body-Simulation"
   },
   {
     "id": 5,

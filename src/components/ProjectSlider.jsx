@@ -3,13 +3,15 @@ import Records from "../assets/records/project-record.json";
 import useReveal from "./useReveal";
 
 const TECH = {
-  0: ["React", "Node", "REST"],
-  1: ["C#", ".NET", "SQL"],
-  2: ["C#", "SQL"],
+  0: ["React Native", "C#", "Azure", "LLM", "Redis", "Python"],
+  1: ["React", "Node", "REST"],
+  2: ["C#", ".NET", "SQL"],
   3: ["Java", "Greenfoot"],
   4: ["C#", "SQL"],
   5: ["HTML", "CSS", "Nunjucks"],
   6: ["React", "JavaScript"],
+  7: ["C#", "SQL"],
+  8: ["C++20", "MPI", "Threads"],
 };
 
 const FOLDER_ICON = (
