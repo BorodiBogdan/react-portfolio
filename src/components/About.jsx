@@ -49,16 +49,16 @@ export function About() {
             <p>
               Hey! I'm <strong>Borodi Bogdan</strong>. I started programming
               in <strong>C++</strong> in high school and never really stopped
-              tinkering. Today I'm a <strong>{age}-year-old</strong> CS student
-              at <strong>Babeș-Bolyai University</strong>, ranked in the top
-              10% of my faculty.
+              tinkering. Today I'm a <strong>{age}-year-old</strong> Computer
+              Science graduate of <strong>Babeș-Bolyai University</strong>,
+              ranked in the top 10% of my faculty.
             </p>
             <p>
-              I just wrapped a software engineering internship at{" "}
-              <strong>Microsoft</strong> in Bucharest, where I worked on
-              internal AI tooling for on-call engineers. Before that I shipped
-              full-stack features at <strong>QPillars</strong> for two
-              thousand-plus users.
+              Since August 2026 I've been a software engineer at{" "}
+              <strong>Microsoft</strong>, working remotely, after interning
+              there on internal AI tooling for on-call engineers. Before that
+              I shipped full-stack features at <strong>QPillars</strong> for
+              two thousand-plus users.
             </p>
             <p>
               Outside of code: sport, music, and the occasional contest

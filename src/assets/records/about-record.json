@@ -3,7 +3,7 @@
     "id": 1,
     "title": "ABOUT ME",
     "content": [
-      "Hey there! My name is Borodi Bogdan, but my closest friends call me Bob. I am a {age}-year-old student from Bistrita, Romania passionate about tech.",
+      "Hey there! My name is Borodi Bogdan, but my closest friends call me Bob. I am a {age}-year-old software engineer from Bistrita, Romania passionate about tech.",
       "My journey into programming began during high school, sparking a fire within me for all things tech. ",
       "The first language programming i have ever used was C++, during informatics classes in high school. Since then, I explored several languages and technologies like C#, Python, 80x86 Assembly, React and so on.",
       "Outside of coding, I'm passionate about sports and fitness. Music also holds a special place in my heart."
@@ -15,8 +15,9 @@
     "content": [
       " I completed my secondary education at National College Liviu Rebreanu - Bistrița, where I distinguished myself with exceptional results, particularly in the field of informatics.",
       " My academic performance and disciplined approach were recognized through a scholarship from CJ Bistrița-Năsăud, underscoring my commitment to excellence.",
-      "Currently, I am enrolled at Babeș-Bolyai University (BBU) in Cluj-Napoca, pursuing a Bachelor's degree in Computer Science.",
-      "I am proud to share that I rank among the top 10% of students in my faculty."
+      "In June 2026 I graduated from Babeș-Bolyai University (BBU) in Cluj-Napoca with a Bachelor's degree in Computer Science.",
+      "I am proud to share that I finished among the top 10% of students in my faculty.",
+      "Starting October 2026, I am pursuing a Master's degree in Artificial Intelligence at the University of Bucharest."
     ]
   },
   {
@@ -25,19 +26,19 @@
     "content": [
       "QPillars played an important role in my growth as a software engineer. It was my first job, where I worked for six months learned a lot and met amazing people",
       "I am especially grateful to my manager, Iacob, for trusting me and giving me this opportunity",
-      "• Refined UX by simplifying navigation and key workflows, boosting engagement across 2,000+ users.",
-      "• Improved backend data retrieval by implementing incremental fetching, reducing cutting data transfer time by ~85%."
+      "Refined UX by simplifying navigation and key workflows, boosting engagement across 2,000+ users.",
+      "Improved backend data retrieval by implementing incremental fetching, reducing cutting data transfer time by ~85%."
     ]
   },
   {
     "id": 4,
     "title": "Microsoft",
     "content": [
-      "I had the opportunity to intern at Microsoft from July to October 2025.",
-      "It was an amazing experience where I sharpened my technical skills and learned how to collaborate in a large team.",
+      "I joined Microsoft full-time as a Software Engineer in August 2026, and I work remotely.",
+      "I first came here as an intern from July to October 2025 — an amazing experience where I sharpened my technical skills and learned how to collaborate in a large team.",
       "Here are some cool things I achieved here:",
-      "• Enhanced Microsoft’s internal AI assistant for on-call engineers, by integrating resilience data.",
-      "• Developed automation to correlate reliability signals (metrics, logs, and failure patterns), which streamlined incident triage."
+      "Enhanced Microsoft’s internal AI assistant for on-call engineers, by integrating resilience data.",
+      "Developed automation to correlate reliability signals (metrics, logs, and failure patterns), which streamlined incident triage."
     ]
   },
   {

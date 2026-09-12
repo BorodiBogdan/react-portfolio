@@ -3,17 +3,17 @@ import useReveal from "./useReveal";
 
 const entries = [
   {
-    id: "freelance",
-    date: "Present",
-    title: "Freelance Developer",
-    org: "Self-employed / Freelance",
+    id: "microsoft-fte",
+    date: "Aug 2026 — Present",
+    title: "Software Engineer",
+    org: "Microsoft — Remote",
     category: "work",
   },
   {
-    id: "microsoft-fte",
-    date: "Aug 2026",
-    title: "Future Software Engineer",
-    org: "Microsoft",
+    id: "stellar-ai",
+    date: "Until Sep 2026",
+    title: "Freelance Developer",
+    org: "Stellar AI",
     category: "work",
   },
   {
@@ -29,6 +29,13 @@ const entries = [
     title: "Full Stack Developer",
     org: "QPillars — Remote",
     category: "work",
+  },
+  {
+    id: "education-msc",
+    date: "Oct 2026 — Jun 2028",
+    title: "M.Sc. Artificial Intelligence",
+    org: "University of Bucharest",
+    category: "education",
   },
   {
     id: "education-bsc",

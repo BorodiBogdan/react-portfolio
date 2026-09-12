@@ -27,11 +27,11 @@ export function Banner() {
       <h2 className="hero__tagline">I build software.</h2>
 
       <p className="hero__body">
-        I'm a {age}-year-old <strong>Computer Science student</strong> at{" "}
-        <strong>Babeș-Bolyai University</strong> in Cluj-Napoca, currently
-        sharpening my craft as an engineer at{" "}
-        <strong>Microsoft</strong>. I care about clean systems, sharp
-        interfaces, and the small details that make a product feel finished.
+        I'm a {age}-year-old <strong>Computer Science graduate</strong> of{" "}
+        <strong>Babeș-Bolyai University</strong> in Cluj-Napoca, now building
+        software as an engineer at <strong>Microsoft</strong>. I care about
+        clean systems, sharp interfaces, and the small details that make a
+        product feel finished.
       </p>
 
       <div className="hero__cta-row">
@@ -51,16 +51,16 @@ export function Banner() {
           <span>// status</span>
           <span>
             <span className="hero__meta-dot" aria-hidden="true" />
-            Joining Microsoft · Aug 2026
+            Software Engineer · Microsoft
           </span>
         </div>
         <div className="hero__meta-item">
           <span>// based</span>
-          <span>Cluj-Napoca, Romania</span>
+          <span>Cluj-Napoca, Romania · Remote</span>
         </div>
         <div className="hero__meta-item">
-          <span>// currently</span>
-          <span>B.Sc. Computer Science · Babeș-Bolyai</span>
+          <span>// education</span>
+          <span>B.Sc. Computer Science · Babeș-Bolyai '26</span>
         </div>
       </div>
     </section>
